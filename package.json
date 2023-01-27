@@ -17,7 +17,10 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
     "axios": "^1.2.4",
+    "contentful": "^9.3.0",
     "gatsby": "^5.5.0",
+    "gatsby-plugin-image": "^3.5.0",
+    "gatsby-source-contentful": "^8.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
