@@ -1,8 +1,7 @@
-import { applyMiddleware } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import { rootReducer } from './reducer/index';
 import rootSaga, { sagaMiddleware } from "./middleware";
 import { composeWithDevTools } from "redux-devtools-extension";
-import { connect } from "react-redux";
 
 const enhancerList = [];
 const devToolsExtension =
@@ -21,7 +20,7 @@ const passRootReducer = (state, action) => {
     return rootReducer(state, action);
 };
 
-const store = connect(passRootReducer, composedEnhancer(applyMiddleware(sagaMiddleware)));
+const store = createStore(passRootReducer, composedEnhancer(applyMiddleware(sagaMiddleware)));
 
 sagaMiddleware.run(rootSaga);
 

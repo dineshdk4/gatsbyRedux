@@ -1,15 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { graphql } from "gatsby";
 import Products from "./product";
 import { Provider } from "react-redux";
 import store from "../../redux/store";
-const contentful = require("contentful");
-
-const client = contentful.createClient({
-  space: "jy76hkrbshn7",
-  environment: "master",
-  accessToken: "lSwgNE8VIFZqVb3tYJUoL9jb45xjf0oFSRscnzUzcxw",
-});
 
 const pageStyles = {
   color: "#232129",
@@ -17,20 +9,7 @@ const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 };
 
-
-
-const fetchContentFull = async () => {
-  await client
-    .getAssets()
-    .then((entry) => console.log(entry))
-    .catch(console.error);
-
-};
-
 const IndexPage = (props) => {
-  useEffect(() => {
-    fetchContentFull();
-  }, []);
 
   return (
     <Provider store={store}>
@@ -46,10 +25,5 @@ const IndexPage = (props) => {
 };
 
 export default IndexPage;
-
-// export const pageQuery = graphql`
-//   query dIneshEntryQuery {
-//   }
-// `;
 
 export const Head = () => <title>Home Page</title>;
