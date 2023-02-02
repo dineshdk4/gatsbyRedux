@@ -1,4 +1,3 @@
-import React from "react"
 import axios from "axios";
 let apiRequestID = 1
 const networkRequest = async ({ url, method = "GET", data = {}, header = {}, apiID = apiRequestID++ }) => {
@@ -20,7 +19,7 @@ const networkRequest = async ({ url, method = "GET", data = {}, header = {}, api
                 url,
                 headers: headerParam,
             }
-            if (method.toUpperCase() != "GET") {
+            if (method.toUpperCase() !== "GET") {
                 request.data = data;
             }
             const response = await axios(request);

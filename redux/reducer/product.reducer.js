@@ -1,5 +1,3 @@
-import * as actions from "../action";
-
 const initialState = {
     mockData: [],
     imageData: [], //this another step,
