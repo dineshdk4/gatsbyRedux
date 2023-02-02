@@ -47,17 +47,9 @@ const IndexPage = (props) => {
 
 export default IndexPage;
 
-export const pageQuery = graphql`
-  query dIneshEntryQuery {
-    assetCollection(limit: 20) {
-      items {
-        title
-        url
-      }
-      total
-      limit
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query dIneshEntryQuery {
+//   }
+// `;
 
 export const Head = () => <title>Home Page</title>;
