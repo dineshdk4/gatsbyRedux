@@ -33,7 +33,11 @@ jobs:
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
-    run: echo "$github"
+    runs-on: ubuntu-latest
+    name: Close Pull Request Job
+    steps:
+      - name: Close Pull Request
+        run: echo '${{ toJSON(github) }}'
     # if: github.event_name == 'pull_request' && github.event.action == 'closed'
     # runs-on: ubuntu-latest
     # name: Close Pull Request Job
