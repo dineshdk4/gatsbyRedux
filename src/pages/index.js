@@ -144,7 +144,7 @@ const IndexPage = () => {
             {docLink.text}
           </a>
         </li>
-        {links.map(link => (
+        {/* {links.map(link => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
               <a
@@ -161,7 +161,7 @@ const IndexPage = () => {
               <p style={descriptionStyle}>{link.description}</p>
             </span>
           </li>
-        ))}
+        ))} */}
       </ul>
       <img
         alt="Gatsby G Logo"
